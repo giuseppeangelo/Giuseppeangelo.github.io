@@ -4,199 +4,121 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Giuseppe — Video Editor & Social Media</title>
-  <meta name="description" content="Video editing + social media content. Product videos, shorts, and repurposed content." />
+  <meta name="description" content="Video editing + social content: event highlights, shorts, product placement, and personal edits." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- NAV -->
   <header class="nav">
     <a class="logo" href="#top">Giuseppe</a>
     <nav class="navlinks">
-      <a href="#work">My Work</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <a href="#main-project">Main Project</a>
+      <a href="#event-highlight">Event Highlight</a>
+      <a href="#event-shorts">Event Shorts</a>
+      <a href="#product-placement">Product Placement</a>
+      <a href="#kalimba">Kalimba</a>
+      <a href="#kalimba-shorts">Kalimba Shorts</a>
       <a href="#contact" class="btn btn-small">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO -->
   <main id="top" class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
-
     <section class="hero-inner">
       <p class="kicker">Video Editing • Shorts • Social</p>
-      <h1>Turning raw footage into content people actually watch.</h1>
+      <h1>Editing long-form into scroll-stopping shorts.</h1>
       <p class="sub">
-        I edit product + brand videos and repurpose them into high-performing shorts with hooks, captions, and clean pacing.
+        I edit event highlights and product content, then repurpose them into short-form deliverables built for TikTok, Reels, and YouTube Shorts.
       </p>
-
       <div class="hero-actions">
-        <a class="btn" href="#work">View My Work</a>
+        <a class="btn" href="#main-project">View Work</a>
         <a class="btn btn-ghost" href="#contact">Hire / Contact</a>
       </div>
-
-      <!-- OPTIONAL: add your reel link here -->
-      <p class="mini">
-        Demo Reel: <a href="YOUR_REEL_LINK" target="_blank" rel="noreferrer">Watch</a>
-      </p>
     </section>
   </main>
 
-  <!-- WORK -->
-  <section id="work" class="section">
+  <!-- MAIN PROJECT -->
+  <section id="main-project" class="section">
     <div class="section-head">
-      <h2>My Work</h2>
-      <p>Internship product work, a year-end project, and the shorts I cut from them.</p>
+      <h2>Best Main Project</h2>
+      <p>Full edit + short cutdown (repurposed for social).</p>
+      <p class="hint">Loads from: <code>assets/main_project/manifest.json</code></p>
     </div>
-
-    <div class="filters" role="tablist" aria-label="Work categories">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="product">Product Videos</button>
-      <button class="filter" data-filter="yearend">Year-End Project</button>
-      <button class="filter" data-filter="shorts">Shorts / Reels</button>
-      <button class="filter" data-filter="process">Before/After</button>
-      <button class="filter" data-filter="kalimba">Kalimba</button>
-    </div>
-
-    <div class="grid" id="workGrid">
-      <!-- CARD EXAMPLE 1 -->
-      <article class="card" data-tags="product,shorts" data-title="Product Video — Example"
-        data-role="Editor • Captions • Cutdowns"
-        data-tools="Premiere Pro • After Effects"
-        data-notes="Made a product video and created 3 short versions optimized for TikTok/IG Reels."
-        data-embed='https://www.youtube.com/embed/VIDEO_ID_HERE'>
-        <div class="thumb">
-          <div class="thumb-badge">Product</div>
-        </div>
-        <div class="card-body">
-          <h3>Product Video — Example</h3>
-          <p>Product edit + 3 shorts</p>
-        </div>
-      </article>
-
-      <!-- CARD EXAMPLE 2 -->
-      <article class="card" data-tags="yearend,shorts" data-title="Year-End Project — Example"
-        data-role="Editor • Story • Pacing"
-        data-tools="Premiere Pro"
-        data-notes="End-of-year recap edit. Repurposed into shorts with different hooks."
-        data-embed='https://player.vimeo.com/video/VIMEO_ID_HERE'>
-        <div class="thumb">
-          <div class="thumb-badge">Year-End</div>
-        </div>
-        <div class="card-body">
-          <h3>Year-End Project — Example</h3>
-          <p>Main video + short variants</p>
-        </div>
-      </article>
-
-      <!-- CARD EXAMPLE 3 -->
-      <article class="card" data-tags="process" data-title="Before/After — Captions + Pacing"
-        data-role="Editor"
-        data-tools="Premiere Pro"
-        data-notes="Quick example showing raw clip → final with captions + tighter pacing."
-        data-embed='https://www.youtube.com/embed/VIDEO_ID_HERE'>
-        <div class="thumb">
-          <div class="thumb-badge">Process</div>
-        </div>
-        <div class="card-body">
-          <h3>Before/After — Captions + Pacing</h3>
-          <p>Raw → Final</p>
-        </div>
-      </article>
-
-      <!-- CARD EXAMPLE 4 -->
-      <article class="card" data-tags="kalimba" data-title="Kalimba — Custom Edits"
-        data-role="Editor"
-        data-tools="Premiere Pro"
-        data-notes="Personal page work: simple edits & content experiments."
-        data-embed='https://www.youtube.com/embed/VIDEO_ID_HERE'>
-        <div class="thumb">
-          <div class="thumb-badge">Kalimba</div>
-        </div>
-        <div class="card-body">
-          <h3>Kalimba — Custom Edits</h3>
-          <p>Personal content experiments</p>
-        </div>
-      </article>
-    </div>
+    <div class="grid" id="grid-main_project"></div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section alt">
-    <div class="two-col">
-      <div>
-        <h2>About</h2>
-        <p>
-          I’m an editor focused on social-first storytelling — turning one video into multiple deliverables:
-          product edits, cutdowns, and shorts with hooks and captions.
-        </p>
-        <ul class="bullets">
-          <li>Shorts strategy: hook, pacing, captions, CTA</li>
-          <li>Repurposing: 1 project → multiple assets</li>
-          <li>Audio cleanup + color polish + export specs</li>
-        </ul>
-      </div>
-      <div class="about-card">
-        <h3>Tools</h3>
-        <p>Premiere Pro • After Effects • (add yours)</p>
-        <h3>Looking for</h3>
-        <p>Social media manager / content editor roles</p>
-      </div>
+  <!-- EVENT HIGHLIGHT -->
+  <section id="event-highlight" class="section alt">
+    <div class="section-head">
+      <h2>Event Highlight Editing</h2>
+      <p>Main highlight edit.</p>
+      <p class="hint">Loads from: <code>assets/event_highlight/manifest.json</code></p>
     </div>
+    <div class="grid" id="grid-event_highlight"></div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
+  <!-- EVENT SHORTS -->
+  <section id="event-shorts" class="section">
     <div class="section-head">
-      <h2>Services</h2>
-      <p>Simple packages employers understand.</p>
+      <h2>Event Shorts</h2>
+      <p>Vertical/social deliverables tied to the event.</p>
+      <p class="hint">Loads from: <code>assets/event_shorts/manifest.json</code></p>
     </div>
+    <div class="grid" id="grid-event_shorts"></div>
+  </section>
 
-    <div class="grid services">
-      <div class="service">
-        <h3>Shorts Repurposing</h3>
-        <p>Turn 1 long video into 3–10 shorts. Hooks, captions, safe margins, exports.</p>
-      </div>
-      <div class="service">
-        <h3>Product / Brand Edits</h3>
-        <p>Tight pacing, clean cuts, music, captions, and basic motion graphics.</p>
-      </div>
-      <div class="service">
-        <h3>Social Posting Support</h3>
-        <p>Thumbnails, captions, posting formats, and a simple content plan.</p>
-      </div>
+  <!-- PRODUCT PLACEMENT -->
+  <section id="product-placement" class="section alt">
+    <div class="section-head">
+      <h2>Product Placement Videos</h2>
+      <p>Short product placement edits.</p>
+      <p class="hint">Loads from: <code>assets/product_placement/manifest.json</code></p>
     </div>
+    <div class="grid" id="grid-product_placement"></div>
+  </section>
+
+  <!-- KALIMBA -->
+  <section id="kalimba" class="section">
+    <div class="section-head">
+      <h2>Kalimba Videos</h2>
+      <p>Personal edits and best videos.</p>
+      <p class="hint">Loads from: <code>assets/kalimba/manifest.json</code></p>
+    </div>
+    <div class="grid" id="grid-kalimba"></div>
+  </section>
+
+  <!-- KALIMBA SHORTS -->
+  <section id="kalimba-shorts" class="section alt">
+    <div class="section-head">
+      <h2>Kalimba Shorts</h2>
+      <p>Short-form edits for social.</p>
+      <p class="hint">Loads from: <code>assets/kalimba_shorts/manifest.json</code></p>
+    </div>
+    <div class="grid" id="grid-kalimba_shorts"></div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section alt">
+  <section id="contact" class="section">
     <div class="section-head">
       <h2>Contact</h2>
-      <p>Fastest way to reach me:</p>
+      <p>Replace with your real info.</p>
     </div>
-
     <div class="contact-card">
       <p><strong>Email:</strong> <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
       <p><strong>Phone:</strong> <a href="tel:YOUR_PHONE">YOUR_PHONE</a></p>
       <p><strong>GitHub:</strong> <a href="YOUR_GITHUB_LINK" target="_blank" rel="noreferrer">Profile</a></p>
-      <p><strong>Reel:</strong> <a href="YOUR_REEL_LINK" target="_blank" rel="noreferrer">Watch</a></p>
     </div>
   </section>
 
-  <!-- MODAL -->
+  <!-- MODAL (video player) -->
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Project video">
       <button class="modal-close" data-close="true" aria-label="Close">✕</button>
       <h3 id="modalTitle">Title</h3>
       <p class="meta" id="modalMeta"></p>
 
-      <div class="video-wrap">
-        <iframe id="modalFrame" title="Project video" frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
+      <div class="video-wrap" id="videoWrap"></div>
 
       <div class="details">
         <p><strong>Role:</strong> <span id="modalRole"></span></p>

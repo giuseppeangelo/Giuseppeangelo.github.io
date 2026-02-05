@@ -22,7 +22,7 @@ a{ color:inherit; }
   border-bottom:1px solid var(--line);
 }
 .logo{ text-decoration:none; font-weight:700; letter-spacing:0.4px; }
-.navlinks{ display:flex; gap:16px; align-items:center; }
+.navlinks{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
 .navlinks a{ text-decoration:none; color:var(--muted); }
 .navlinks a:hover{ color:var(--text); }
 
@@ -36,7 +36,7 @@ a{ color:inherit; }
 }
 
 .hero{
-  position:relative; min-height:72vh; display:grid; place-items:center;
+  position:relative; min-height:62vh; display:grid; place-items:center;
   padding:90px 18px 48px;
 }
 .hero-bg{
@@ -47,33 +47,22 @@ a{ color:inherit; }
     linear-gradient(180deg, rgba(255,255,255,0.06), transparent 60%);
   border-bottom:1px solid var(--line);
 }
-.hero-inner{
-  position:relative; max-width:980px; width:100%;
-}
+.hero-inner{ position:relative; max-width:980px; width:100%; }
 .kicker{ color:var(--muted); margin:0 0 10px; letter-spacing:0.18em; text-transform:uppercase; font-size:12px; }
 h1{ font-size: clamp(34px, 4vw, 54px); line-height:1.02; margin:0 0 12px; }
-.sub{ color:var(--muted); max-width:60ch; font-size:18px; line-height:1.5; margin:0 0 18px; }
-.hero-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
-.mini{ color:var(--muted); font-size:14px; }
+.sub{ color:var(--muted); max-width:65ch; font-size:18px; line-height:1.5; margin:0 0 18px; }
+.hero-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
 
 .section-head h2{ margin:0 0 8px; font-size:30px; }
 .section-head p{ margin:0 0 18px; color:var(--muted); }
-
-.filters{
-  display:flex; gap:10px; flex-wrap:wrap;
-  margin:18px 0 18px;
-}
-.filter{
-  border:1px solid var(--line); background:transparent; color:var(--muted);
-  padding:10px 14px; border-radius:999px; cursor:pointer;
-}
-.filter.active{ color:var(--text); border-color:rgba(255,255,255,0.25); }
+.hint { color: var(--muted); font-size: 13px; margin: 6px 0 0; }
 
 .grid{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
   gap:14px;
 }
+
 .card{
   grid-column: span 6;
   background:var(--panel);
@@ -81,41 +70,29 @@ h1{ font-size: clamp(34px, 4vw, 54px); line-height:1.02; margin:0 0 12px; }
   border-radius:var(--radius);
   overflow:hidden;
   cursor:pointer;
-  transition: transform 0.12s ease;
+  transition: transform 0.12s ease, border-color 0.12s ease;
 }
 .card:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,0.20); }
+
 .thumb{
-  position:relative;
+  display:block;
+  width:100%;
   aspect-ratio: 16/9;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  object-fit: cover;
+  background:#0b0d10;
 }
-.thumb-badge{
-  position:absolute; left:12px; top:12px;
-  background:rgba(0,0,0,0.45);
-  border:1px solid rgba(255,255,255,0.18);
-  padding:6px 10px; border-radius:999px; font-size:12px;
-}
+
 .card-body{ padding:14px; }
 .card-body h3{ margin:0 0 6px; font-size:18px; }
 .card-body p{ margin:0; color:var(--muted); }
 
-.two-col{
-  display:grid; grid-template-columns: 1.4fr 1fr; gap:18px; align-items:start;
-  padding:0 18px; max-width:1080px; margin:0 auto;
-}
-.about-card{
-  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+.empty{
+  background:var(--panel);
+  border:1px dashed rgba(255,255,255,0.18);
+  border-radius:var(--radius);
   padding:18px;
+  color:var(--muted);
 }
-.bullets{ margin:14px 0 0; color:var(--muted); }
-.bullets li{ margin:8px 0; }
-
-.services .service{
-  grid-column: span 4;
-  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
-  padding:18px;
-}
-.services .service p{ color:var(--muted); }
 
 .contact-card{
   max-width:680px; margin:0 auto; padding:18px;
@@ -124,13 +101,13 @@ h1{ font-size: clamp(34px, 4vw, 54px); line-height:1.02; margin:0 0 12px; }
 
 .footer{ padding:28px 18px; text-align:center; color:var(--muted); border-top:1px solid var(--line); }
 
-.modal{ position:fixed; inset:0; display:none; }
+.modal{ position:fixed; inset:0; display:none; z-index:50; }
 .modal.open{ display:block; }
 .modal-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,0.65); }
 .modal-panel{
   position:relative;
   max-width:980px;
-  margin:6vh auto;
+  margin:5vh auto;
   background:var(--panel);
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -142,15 +119,63 @@ h1{ font-size: clamp(34px, 4vw, 54px); line-height:1.02; margin:0 0 12px; }
   border:1px solid var(--line); background:transparent; color:var(--text);
   width:40px; height:40px; border-radius:12px; cursor:pointer;
 }
-.meta{ color:var(--muted); margin-top:4px; }
-.video-wrap{ margin:14px 0; border-radius:14px; overflow:hidden; border:1px solid var(--line); }
-.video-wrap iframe{ width:100%; height:min(56vw, 520px); display:block; background:#000; }
+.meta{ color:var(--muted); margin:6px 0 0; }
+
+.video-wrap{
+  margin:14px 0;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#000;
+  min-height: 240px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.video-wrap video{
+  width:100%;
+  height:auto;
+  display:block;
+  background:#000;
+}
+.video-error{
+  padding:16px;
+  color:var(--muted);
+  text-align:center;
+  line-height:1.4;
+}
+
 .details p{ margin:10px 0; color:var(--muted); }
 .details strong{ color:var(--text); }
 
 @media (max-width: 860px){
   .card{ grid-column: span 12; }
-  .two-col{ grid-template-columns: 1fr; }
-  .services .service{ grid-column: span 12; }
   .navlinks{ gap:10px; }
+}
+/* --- Modal player: auto vertical vs horizontal --- */
+.video-wrap {
+  /* keep your existing styles, but ensure this is present */
+  width: 100%;
+}
+
+/* Default (horizontal) */
+.video-wrap.horizontal {
+  aspect-ratio: 16 / 9;
+}
+
+/* Vertical viewer (phone-style) */
+.video-wrap.vertical {
+  aspect-ratio: 9 / 16;
+  width: min(420px, 100%);     /* keeps it from being insanely wide */
+  margin: 14px auto;           /* centers it */
+  max-height: 72vh;            /* keeps it from going off-screen */
+}
+
+/* Make the video fill the wrap cleanly */
+.video-wrap video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;         /* shows full frame (no crop) */
+  background: #000;
 }
